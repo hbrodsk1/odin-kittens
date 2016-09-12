@@ -1,0 +1,19 @@
+<% flash.each do |key, value| %>
+    <div><%= value %></div>
+<% end %>
+
+<h1><%= @kitten.name %>'s page!</h1>
+
+<h3>Here is all of <%= @kitten.name %>'s information:</h3>
+
+<p>Age: <%= @kitten.age %></p>
+<p>Cuteness: <%= @kitten.cuteness %></p>
+<p>Softness: <%= @kitten.softness %></p>
+
+<h5><%= link_to "Update your kittens information", edit_kitten_path %></h5>
+
+<h5><%= link_to "Delete your kitten", @kitten, method: :delete, data: { confirm: "Are you sure?" } %></h5>
+
+<h3><%= link_to "Create a new kitten here!", new_kitten_path %></h3>
+
+<h4><%= link_to "Check out all the kittens here!", root_path %></h4>

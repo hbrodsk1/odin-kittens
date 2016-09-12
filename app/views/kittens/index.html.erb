@@ -1,0 +1,10 @@
+<% flash.each do |key, value| %>
+    <div><%= value %></div>
+<% end %>
+
+<h3>Here's all the kittens!</h3>
+<% @kittens.each do |kitten| %>
+	<p><%= link_to kitten.name, kitten_path(kitten) %></p>
+<% end %>
+
+<h3><%= link_to "Create a new kitten here!", new_kitten_path %></h3>
